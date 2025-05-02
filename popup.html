@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Translator</title>
+  <style>
+    body {
+      width: 250px;
+      font-family: Arial, sans-serif;
+      padding: 10px;
+    }
+    
+    h1 {
+      font-size: 16px;
+      color: #3498db;
+      margin-top: 0;
+      text-align: center;
+    }
+    
+    .settings-btn {
+      display: block;
+      width: 100%;
+      padding: 8px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    
+    .settings-btn:hover {
+      background-color: #2980b9;
+    }
+    
+    .info {
+      font-size: 12px;
+      color: #666;
+      margin-top: 15px;
+    }
+    
+    .status {
+      margin-top: 15px;
+      padding: 8px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+    
+    .status.error {
+      background-color: #ffecec;
+      color: #e74c3c;
+    }
+    
+    .status.success {
+      background-color: #efffef;
+      color: #27ae60;
+    }
+  </style>
+</head>
+<body>
+  <h1>AI Translator</h1>
+  
+  <div id="api-status" class="status"></div>
+  
+  <p>Click the translator icon next to any text input to translate the text.</p>
+  
+  <button id="settings-btn" class="settings-btn">Open Settings</button>
+  
+  <div class="info">
+    <p>Currently translating from <span id="source-lang">auto-detect</span> to <span id="target-lang">English</span>.</p>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
